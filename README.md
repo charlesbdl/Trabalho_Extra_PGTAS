@@ -64,3 +64,14 @@ Esta API permite o registro e login de usuários, com separação entre Controll
 
 ## Documentação Swagger
 Acesse `/docs` após iniciar a API para visualizar e testar os endpoints.
+
+## Testes de Performance
+
+Para executar testes de performance com K6:
+
+1. Instale o K6: `winget install k6 --source winget`
+2. Inicie a API: `npm start`
+3. Execute o teste:
+   - **Linux/macOS:** `./run-k6-test.bat` ou `& "C:\Program Files\k6\k6.exe" run performance/api-performance.js`
+
+Veja mais detalhes em `performance/README.md`.
