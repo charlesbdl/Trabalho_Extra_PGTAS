@@ -38,6 +38,12 @@ Thumbs.db
 # Test output
 test-results/
 
+# K6 temporary files (keep only final HTML report)
+performance/k6-raw-data.json
+performance/k6-console-output.txt
+performance/k6-summary.json
+performance/k6-results.json
+
 # Misc
 *.swp
 *.swo

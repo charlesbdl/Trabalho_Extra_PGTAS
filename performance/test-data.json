@@ -1,0 +1,22 @@
+[
+  {
+    "login": "admin",
+    "senha": "admin123",
+    "role": "admin"
+  },
+  {
+    "login": "manager",
+    "senha": "manager123",
+    "role": "manager"
+  },
+  {
+    "login": "user1",
+    "senha": "user123",
+    "role": "user"
+  },
+  {
+    "login": "user2",
+    "senha": "user456",
+    "role": "user"
+  }
+]

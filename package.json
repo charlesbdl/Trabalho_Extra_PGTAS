@@ -4,7 +4,12 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "mocha --require ts-node/register --extension ts \"test/**/*.ts\""
+    "test": "mocha --require ts-node/register --extension ts \"test/**/*.ts\"",
+    "k6:test": "k6 run --env BASE_URL=http://localhost:3000 --env MAX_RESPONSE_TIME=1000 --env SUCCESS_RATE_THRESHOLD=0.95 performance/api-performance.js",
+    "k6:report": "node performance/generate-report.js",
+    "k6:full": "npm run k6:test && npm run k6:report",
+    "ci:start": "node app.js &",
+    "ci:health": "curl -f http://localhost:3000/health || echo 'API não está rodando'"
   },
   "dependencies": {
     "express": "^4.18.2",
